@@ -38,14 +38,19 @@ __PACKAGE__->meta->make_immutable;
 
 __END__
 
-# ABSTRACT:  A short description of Dist::Zilla::Plugin::Git::ExcludeUntracked
+# ABSTRACT:  Excludes untracked files from your dist
 
 =head1 SYNOPSIS
 
+  [Git::ExcludeUntracked]
+
 =head1 DESCRIPTION
 
-=head1 FUNCTIONS
+This L<Dist::Zilla> plugin automatically excludes any files from your
+distribution that are not currently tracked by Git.
 
 =head1 SEE ALSO
+
+L<Dist::Zilla>
 
 =cut

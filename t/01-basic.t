@@ -53,6 +53,8 @@ my $tzil = Builder->from_config(
             version => '0.01',
         }, [GatherDir => {
             include_dotfiles => '1',
+        }], [PruneFiles => {
+            filename => '.git',
         }], qw/FakeRelease MakeMaker Manifest Git::ExcludeUntracked/
         ),
       },
