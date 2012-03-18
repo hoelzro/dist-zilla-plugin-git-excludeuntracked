@@ -1,2 +1,3 @@
 Dist-Zilla-Plugin-Git-ExcludeUntracked*
 .build
+tmp/
