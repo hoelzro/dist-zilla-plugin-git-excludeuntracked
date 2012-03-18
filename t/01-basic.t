@@ -57,9 +57,7 @@ my $tzil = Builder->from_config(
     }
 );
 
-chdir $tzil->tempdir;
-
-chdir 'source';
+chdir $tzil->tempdir->file('source');
 
 silent_system 'git', 'init';
 silent_system 'git', 'add', 'dist.ini', 'lib/', '.gitignore';
