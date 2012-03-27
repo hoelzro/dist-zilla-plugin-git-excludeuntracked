@@ -53,4 +53,14 @@ distribution that are not currently tracked by Git.
 
 L<Dist::Zilla>
 
+=begin comment
+
+=over
+
+=item prune_files
+
+=back
+
+=end comment
+
 =cut
