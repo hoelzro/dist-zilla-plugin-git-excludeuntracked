@@ -5,6 +5,7 @@ use autodie qw(chdir fork);
 
 use Test::More tests => 1;
 use Test::DZil;
+use Archive::Tar;
 
 sub silent_system {
     my ( @args ) = @_;
@@ -31,14 +32,7 @@ sub list_archive {
         require Archive::Tar::Wrapper;
     };
 
-    if($ok) {
-        $archive_class = 'Archive::Tar::Wrapper';
-    } else {
-        require Archive::Tar;
-        $archive_class = 'Archive::Tar';
-    }
-
-    my $archive = $archive_class->new($archive_filename);
+    my $archive = Archive::Tar->new($archive_filename);
 
     my @files = $archive->list_files;
 
