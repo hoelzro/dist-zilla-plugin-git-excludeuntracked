@@ -66,10 +66,10 @@ $tzil->build_archive;
 my @archive_files = sort(list_archive($tzil->archive_filename));
 
 is_deeply \@archive_files, [
-    'Fake-0.01',
+    'Fake-0.01/',
     'Fake-0.01/MANIFEST',
     'Fake-0.01/Makefile.PL',
     'Fake-0.01/dist.ini',
-    'Fake-0.01/lib',
+    'Fake-0.01/lib/',
     'Fake-0.01/lib/Fake.pm',
 ];
