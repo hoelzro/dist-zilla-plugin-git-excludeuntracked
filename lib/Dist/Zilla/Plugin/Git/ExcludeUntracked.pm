@@ -49,6 +49,14 @@ __END__
 This L<Dist::Zilla> plugin automatically excludes any files from your
 distribution that are not currently tracked by Git.
 
+=head1 COMPARED TO GIT::GATHERDIR
+
+There's another plugin that provides similar functionality:
+L<Dist::Zilla::Plugin::Git::GatherDir>.  The chief difference is that
+while this plugin is designed to work in concert with
+L<Dist::Zilla::Plugin::GatherDir>, C<Git::GatherDir> is designed to work
+as a replacement for C<GatherDir>.
+
 =head1 SEE ALSO
 
 L<Dist::Zilla>
