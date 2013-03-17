@@ -59,7 +59,7 @@ as a replacement for C<GatherDir>.
 
 =head1 SEE ALSO
 
-L<Dist::Zilla>
+L<Dist::Zilla>, L<Dist::Zilla::Plugin::Git::GatherDir>
 
 =begin comment
 
