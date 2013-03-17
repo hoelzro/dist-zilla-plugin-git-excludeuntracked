@@ -26,12 +26,6 @@ sub silent_system {
 sub list_archive {
     my ( $archive_filename ) = @_;
 
-    my $archive_class;
-
-    my $ok = eval {
-        require Archive::Tar::Wrapper;
-    };
-
     my $archive = Archive::Tar->new($archive_filename);
 
     my @files = $archive->list_files;
