@@ -1,5 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+     - Remove usage of Archive::Tar::Wrapper, which broke tests (Ivan Bessarabov++)
 
 0.01 March 27 2012
+     - Initial release.
