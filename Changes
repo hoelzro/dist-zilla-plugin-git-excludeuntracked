@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.03 March 27 2013
      - Fix bug where subrepos would be included in resulting distribution
 
 0.02 March 17 2013
