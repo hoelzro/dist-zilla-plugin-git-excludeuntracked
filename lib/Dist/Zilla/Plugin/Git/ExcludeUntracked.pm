@@ -3,9 +3,23 @@ package Dist::Zilla::Plugin::Git::ExcludeUntracked;
 
 ## use critic (RequireUseStrict)
 use Moose;
+use File::Find;
 
 with 'Dist::Zilla::Role::FilePruner';
 
+sub _gather_files_under_dir {
+    my ( $self, $dirname ) = @_;
+
+    my @files;
+
+    find(sub {
+        return if -d;
+
+        push @files, $File::Find::name;
+    }, $dirname);
+
+    return @files;
+}
 
 sub _assemble_untracked_lookup {
     my ( $self ) = @_;
@@ -13,6 +27,16 @@ sub _assemble_untracked_lookup {
     my @untracked_files = map {
         chomp; $_
     } qx(git ls-files --other);
+
+    my @subdir_files;
+    foreach my $file (@untracked_files) {
+        if($file =~ m{/$}) {
+            push @subdir_files, $self->_gather_files_under_dir($file);
+            undef $file;
+        }
+    }
+    @untracked_files = grep { defined() } @untracked_files;
+    push @untracked_files, @subdir_files;
 
     return map { $_ => 1 } @untracked_files;
 }
