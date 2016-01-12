@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+    - Mark this plugin as deprecated in favor of Dist::Zilla::Plugin::Git::GatherDir
 
 0.03 March 27 2013
      - Fix bug where subrepos would be included in resulting distribution
