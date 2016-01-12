@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.04 January 12 2016
     - Mark this plugin as deprecated in favor of Dist::Zilla::Plugin::Git::GatherDir
 
 0.03 March 27 2013
