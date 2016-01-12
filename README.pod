@@ -1,12 +1,14 @@
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
-Dist::Zilla::Plugin::Git::ExcludeUntracked - Excludes untracked files from your dist
+Dist::Zilla::Plugin::Git::ExcludeUntracked - Excludes untracked files from your dist [DEPRECATED]
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 
@@ -14,16 +16,10 @@ version 0.03
 
 =head1 DESCRIPTION
 
+B<NOTE> This module is deprecated in favor of L<Dist::Zilla::Plugin::Git::GatherDir>.
+
 This L<Dist::Zilla> plugin automatically excludes any files from your
 distribution that are not currently tracked by Git.
-
-=head1 COMPARED TO GIT::GATHERDIR
-
-There's another plugin that provides similar functionality:
-L<Dist::Zilla::Plugin::Git::GatherDir>.  The chief difference is that
-while this plugin is designed to work in concert with
-L<Dist::Zilla::Plugin::GatherDir>, C<Git::GatherDir> is designed to work
-as a replacement for C<GatherDir>.
 
 =head1 SEE ALSO
 
@@ -59,3 +55,4 @@ When submitting a bug or request, please include a test-file or a
 patch to an existing test-file that illustrates the bug or desired
 feature.
 
+=cut
