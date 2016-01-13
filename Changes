@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+    - Set up deprecated metadata
 
 0.04 January 12 2016
     - Mark this plugin as deprecated in favor of Dist::Zilla::Plugin::Git::GatherDir
