@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+    - Fix tests breaking with newer Dist::Zilla
 
 0.05 January 12 2016
     - Set up deprecated metadata
